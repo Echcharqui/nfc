@@ -12,7 +12,7 @@ const App: () => React$Node = () => {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="WriteTakt">
         <Stack.Screen name="WriteTakt" component={WriteTaktScreen} />
-        <Stack.Screen name="WriteTakt" component={ReadTaktScreen} />
+        <Stack.Screen name="ReadTakt" component={ReadTaktScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
