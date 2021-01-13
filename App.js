@@ -1,19 +1,20 @@
 import 'react-native-gesture-handler';
 import React from 'react';
+import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
+
 import {WriteTaktScreen} from './components/WriteTakt';
 import {ReadTaktScreen} from './components/ReadTakt';
 
-const Stack = createStackNavigator();
+const Tab = createMaterialTopTabNavigator();
 
 const App: () => React$Node = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="WriteTakt">
-        <Stack.Screen name="WriteTakt" component={WriteTaktScreen} />
-        <Stack.Screen name="ReadTakt" component={ReadTaktScreen} />
-      </Stack.Navigator>
+      <Tab.Navigator>
+        <Tab.Screen name="Write" component={WriteTaktScreen} />
+        <Tab.Screen name="Read" component={ReadTaktScreen} />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 };
